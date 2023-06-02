@@ -460,3 +460,24 @@
     margin-right: 0;
   }
 }
+
+.graybutton {
+margin-bottom: -2px;
+color: #292d33 !important;
+border-color: #292d33 !important;
+color: #555c66 !important;
+border-color: #555c66 !important;
+border-color: #478ac9;
+stroke: #478ac9;
+margin-top: 20px;
+margin-bottom: 20px;
+border-radius: 0 !important;
+color: #ffffff !important;
+background-color: #858e99 !important;
+color: inherit !important;
+background-color: transparent !important;
+--border-radius: 6px;
+color: #000000 !important;
+color: #111111 !important;
+color: #ffffff !important;
+}
