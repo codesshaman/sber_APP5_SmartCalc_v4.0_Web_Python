@@ -9,8 +9,18 @@ def math_e():
     return math.e
 
 
+def zero_killer(value):
+    string = str(value)
+    num = string.split(".")
+    if num[1] == "0":
+        return int(num[0])
+    else:
+        return value
+
+
 class SmartCalc():
     """Основной класс модели"""
+
     def __init__(self, number):
         self.value = number
 
@@ -22,14 +32,6 @@ class SmartCalc():
             return int(self.value)
         else:
             return float(self.value)
-
-    def zero_killer(self, value):
-        string = str(value)
-        num = string.split(".")
-        if num[1] == "0":
-            return int(num[0])
-        else:
-            return value
 
     def math_eval(self):
         if len(str(self.value)) > 0:
@@ -87,11 +89,11 @@ class SmartCalc():
 
     def math_sqrt(self):
         res = math.sqrt(self.types_convert())
-        return self.zero_killer(res)
+        return zero_killer(res)
 
     def math_power(self):
         res = math.pow(self.types_convert(), 2)
-        return self.zero_killer(res)
+        return zero_killer(res)
 
 
 value = '-1.8'
