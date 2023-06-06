@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Calculator</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>Web Calculator</h1>
+    <form action="{% url 'calculate' %}" method="POST">
+        {% csrf_token %}
+        <input type="number" name="num1" placeholder="Enter number 1" required>
+        <select name="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="number" name="num2" placeholder="Enter number 2" required>
+        <input type="submit" value="Calculate">
+    </form>
+    {% if result %}
+        <h2>Result: {{ result }}</h2>
+    {% endif %}
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>
