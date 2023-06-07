@@ -25,3 +25,7 @@ def calculate(request):
         return render(request, 'calculator.html', {'result': result})
     else:
         return render(request, 'calculator.html')
+
+
+def calc(request):
+    return render(request, 'index.html')
