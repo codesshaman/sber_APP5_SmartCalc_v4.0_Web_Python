@@ -86,7 +86,7 @@
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
-                <a class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-2-base u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-4" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><=</a>
+                <a id="erase-button" class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-2-base u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-4" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><=</a>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
@@ -241,6 +241,10 @@
       clearDisplay();
     });
 
+    document.getElementById("erase-button").addEventListener("click", function() {
+      eraseLastCharacter();
+    });
+
     function addToDisplay(number) {
       var displayInput = document.getElementById("calc_display");
       if (number === "." && displayInput.value.includes(".")) {
@@ -278,9 +282,18 @@
       };
 
       // Отправляем значение на сервер для обработки в функции Python
-      xhttp.open("GET", "/process?input=" + urlInput, true);
-      xhttp.send();
-    }
+        xhttp.open("GET", "/process?input=" + urlInput, true);
+          xhttp.send();
+        }
+
+      function eraseLastCharacter() {
+        var displayInput = document.getElementById("calc_display");
+        var currentValue = displayInput.value;
+
+        if (currentValue.length > 0) {
+          displayInput.value = currentValue.slice(0, -1);
+        }
+      }
 </script>
 
 </body></html>

@@ -26,8 +26,6 @@ if __name__ == '__main__':
 
 def process(request):
     expression = request.GET.get('input', '')
-    # parsed = parse_qs(expression)
-    # expression = parsed.get('expression', [''])[0]
     try:
         parsed_tokens = mathfunc.parse_expression(expression)
         result = mathfunc.evaluate_expression(parsed_tokens)
