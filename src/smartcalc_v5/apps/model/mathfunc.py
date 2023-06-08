@@ -54,10 +54,10 @@ def evaluate_expression(tokens):
         elif token in ('+', '-', '*', '/'):
             operand2 = stack.pop()
             operand1 = stack.pop()
-            if token == '+':
-                result = operand1 + operand2
-            elif token == '-':
+            if token == '-':
                 result = operand1 - operand2
+            elif token == '+':
+                result = operand1 + operand2
             elif token == '*':
                 result = operand1 * operand2
             elif token == '/':
@@ -65,3 +65,23 @@ def evaluate_expression(tokens):
             stack.append(result)
 
     return stack.pop()
+
+
+# def result_display(value):
+#     string = str(value)
+#     num = string.split(".")
+#     if num[1] == "0":
+#         return int(num[0])
+#     else:
+#         return value
+
+def main():
+    expression = "(3 + 4)"
+    parsed_tokens = parse_expression(expression)
+    result = evaluate_expression(parsed_tokens)
+    # result = result_display(result)
+    print(result)
+
+
+if __name__ == '__main__':
+    main()

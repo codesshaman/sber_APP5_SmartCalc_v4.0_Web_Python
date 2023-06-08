@@ -1,7 +1,6 @@
 from django.http import HttpResponse
 from . import mathfunc
-import math
-import re
+from urllib.parse import parse_qs
 
 
 # Create your models here.
@@ -15,7 +14,7 @@ def result_display(value):
 
 
 def main():
-    expression = "(3 + 4) * 2 - 1 / 5"
+    expression = "(3 + 4)"
     parsed_tokens = mathfunc.parse_expression(expression)
     result = mathfunc.evaluate_expression(parsed_tokens)
     print(result)
@@ -27,6 +26,8 @@ if __name__ == '__main__':
 
 def process(request):
     expression = request.GET.get('input', '')
+    # parsed = parse_qs(expression)
+    # expression = parsed.get('expression', [''])[0]
     try:
         parsed_tokens = mathfunc.parse_expression(expression)
         result = mathfunc.evaluate_expression(parsed_tokens)
