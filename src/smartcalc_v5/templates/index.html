@@ -8,7 +8,15 @@
     <title>Калькулятор</title>
     <link rel="stylesheet" href="{% static 'css/nicepage.css' %}" media="screen">
 <link rel="stylesheet" href="{% static 'css/index.css' %}" media="screen">
-    <script class="u-script" type="text/javascript" src="{% static 'js/my_func.js' %}" defer=""></script>
+    <script>
+          document.getElementById("number-7").addEventListener("click", function() {
+            addToDisplay("7");
+          });
+          function addToDisplay(number) {
+            var displayInput = document.getElementById("calc_display");
+            displayInput.value += number;
+          }
+    </script>
     <meta name="generator" content="Nicepage 5.10.13, nicepage.com">
     <meta name="referrer" content="origin">
     <link rel="icon" href="images/favicon.png">
@@ -62,7 +70,7 @@
           <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px;">
             <div class="u-form-email u-form-group">
                 <label for="email-bd45" class="u-label">ЭЛЕКТРОНИКА - МК 2142</label>
-              <input placeholder="0" id="display" class="u-border-3 u-border-palette-1-dark-1 u-input u-input-rectangle u-palette-5-light-1">
+              <input placeholder="0" id="calc_display" class="u-border-3 u-border-palette-1-dark-1 u-input u-input-rectangle u-palette-5-light-1">
             </div>
             <div class="u-align-left u-form-group u-form-submit">
               <a href="#" class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">C</a>
@@ -102,9 +110,9 @@
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-6">
-                <a class="u-active-custom-color-4 u-border-2 u-border-active-custom-color-5 u-border-custom-color-2 u-border-hover-palette-5-dark-2 u-btn u-btn-round u-button-style u-custom-color-1 u-custom-item u-hover-custom-color-4 u-radius-6 u-text-active-black u-text-custom-color-3 u-text-hover-white u-btn-7" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" onclick="addToDisplay('7')">7</a>
-              </div>
+                <div class="u-container-layout u-similar-container u-valign-top u-container-layout-6">
+                    <a class="u-active-custom-color-4 u-border-2 u-border-active-custom-color-5 u-border-custom-color-2 u-border-hover-palette-5-dark-2 u-btn u-btn-round u-button-style u-custom-color-1 u-custom-item u-hover-custom-color-4 u-radius-6 u-text-active-black u-text-custom-color-3 u-text-hover-white u-btn-10" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" onclick="addToDisplay('7')">7</a>
+                </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-7">
