@@ -1,5 +1,6 @@
 import re
-from core import SmartCalc as sc
+import math
+# from core import SmartCalc as sc
 
 def parse_expression(expression):
     # Используем регулярное выражение для разделения строки на числа, операции и скобки
@@ -12,11 +13,11 @@ def parse_expression(expression):
               r"|\s*tan\s+" \
               r"|\s*atan\s+" \
               r"|\s*sqrt\s+" \
-              r"|[\d.]+|\+|\-|\*|/|\(|\))"
+              r"|[\d.]+|\+|\-|\%|\*|/|\(|\))"
     tokens = re.findall(pattern, expression)
 
     # Формируем словарь токенов
-    dict = ('+', '-', '*', '/',
+    dict = ('+', '-', '*', '/', '%',
             'sin ', 'cos ', 'acos ', 'asin ',
             'ln ', 'log ', 'tan ', 'atan ', 'sqrt ')
     # Создаём пустой стек
@@ -63,14 +64,14 @@ def parse_expression(expression):
 
 def evaluate_expression(tokens):
     stack = []
-    dict = ('+', '-', '*', '/',
-            'sin ', 'cos ', 'acos ', 'asin ',
-            'ln ', 'log ', 'tan ', 'atan ', 'sqrt ')
+    operations = ('+', '-', '*', '/', '% ')
+    functions = ('sin', 'cos', 'acos', 'asin',
+                 'ln', 'log', 'tan', 'atan', 'sqrt')
 
     for token in tokens:
         if isinstance(token, float):
             stack.append(token)
-        elif token in dict:
+        elif token in operations:
             operand2 = stack.pop()
             operand1 = stack.pop()
             if token == '-':
@@ -81,24 +82,30 @@ def evaluate_expression(tokens):
                 result = operand1 * operand2
             elif token == '/':
                 result = operand1 / operand2
-            elif token == 'cos':
-                result = sc.math_cos(operand1)
-            elif token == 'sin':
-                result = operand1 / operand2
-            elif token == 'acos':
-                result = operand1 / operand2
-            elif token == 'asin':
-                result = operand1 / operand2
-            elif token == 'ln':
-                result = operand1 / operand2
-            elif token == 'log':
-                result = operand1 / operand2
-            elif token == 'tan':
-                result = operand1 / operand2
-            elif token == 'atan':
-                result = operand1 / operand2
-            elif token == 'sqrt':
-                result = operand1 / operand2
+            elif token == '%':
+                result = operand2 * (operand1 / 100)
+            stack.append(result)
+        elif token in functions:
+            func = token.strip()
+            operand = stack.pop()
+            if func == 'sin':
+                result = math.sin(operand)
+            elif func == 'cos':
+                result = math.cos(operand)
+            elif func == 'acos':
+                result = math.acos(operand)
+            elif func == 'asin':
+                result = math.asin(operand)
+            elif func == 'ln':
+                result = math.log(operand)
+            elif func == 'log':
+                result = math.log10(operand)
+            elif func == 'tan':
+                result = math.tan(operand)
+            elif func == 'atan':
+                result = math.atan(operand)
+            elif func == 'sqrt':
+                result = math.sqrt(operand)
             stack.append(result)
 
     return stack.pop()
@@ -113,7 +120,7 @@ def evaluate_expression(tokens):
 #         return value
 
 def main():
-    expression = "cos 0.333"
+    expression = "log 3"
     parsed_tokens = parse_expression(expression)
     result = evaluate_expression(parsed_tokens)
     # result = result_display(result)
