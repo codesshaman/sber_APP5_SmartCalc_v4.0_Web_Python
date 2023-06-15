@@ -8,11 +8,9 @@
     <title>Калькулятор</title>
     <link rel="stylesheet" href="{% static 'css/nicepage.css' %}" media="screen">
 <link rel="stylesheet" href="{% static 'css/index.css' %}" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery-1.9.1.min.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 5.10.13, nicepage.com">
     <meta name="referrer" content="origin">
-    <link rel="icon" href="images/favicon.png">
+    <link rel="icon" href="{% static 'images/favicon.png' %}">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     
     
@@ -62,12 +60,11 @@
         <div class="u-form u-form-1">
           <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px;">
             <div class="u-form-email u-form-group">
-              <label for="email-bd45" class="u-label">Эл. почта</label>
-              <input type="email" placeholder="Введите Ваш email адрес" id="email-bd45" name="email" class="u-border-3 u-border-palette-1-dark-1 u-input u-input-rectangle u-palette-5-light-1" required="">
+                <label for="email-bd45" class="u-label">ЭЛЕКТРОНИКА - МК 2142</label>
+              <input placeholder="0" id="calc_display" class="u-border-3 u-border-palette-1-dark-1 u-input u-input-rectangle u-palette-5-light-1">
             </div>
             <div class="u-align-left u-form-group u-form-submit">
-              <a href="#" class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">C</a>
-              <input type="submit" value="submit" class="u-form-control-hidden">
+              <a id="clear-button" class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">C</a>
             </div>
             <div class="u-form-send-message u-form-send-success"> Спасибо! Ваше сообщение отправлено. </div>
             <div class="u-form-send-error u-form-send-message"> Отправка не удалась. Пожалуйста, исправьте ошибки и попробуйте еще раз. </div>
@@ -79,77 +76,77 @@
           <div class="u-repeater u-repeater-1">
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
-                <a href="index.html#sec-0854" class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-2" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">cos</a>
+                <a class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-2" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" onclick="addToDisplay('cos ')">cos</a>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
-                <a href="index.html#sec-0854" class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-3" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">sin</a>
+                <a class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-3" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" onclick="addToDisplay('sin ')">sin</a>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
-                <a href="index.html#sec-0854" class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-2-base u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-4" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><=</a>
+                <a id="erase-button" class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-2-base u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-4" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><=</a>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-4">
-                <a href="index.html#sec-0854" class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-5" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">acos</a>
+                <a class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-5" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" onclick="addToDisplay('acos ')">acos</a>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-5">
-                <a href="index.html#sec-0854" class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-6" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">asin</a>
+                <a class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-6" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" onclick="addToDisplay('asin ')">asin</a>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-6">
-                <a href="index.html#sec-0854" class="u-active-custom-color-4 u-border-2 u-border-active-custom-color-5 u-border-custom-color-2 u-border-hover-palette-5-dark-2 u-btn u-btn-round u-button-style u-custom-color-1 u-custom-item u-hover-custom-color-4 u-radius-6 u-text-active-black u-text-custom-color-3 u-text-hover-white u-btn-7" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">7</a>
-              </div>
+                <div class="u-container-layout u-similar-container u-valign-top u-container-layout-6">
+                    <a class="u-active-custom-color-4 u-border-2 u-border-active-custom-color-5 u-border-custom-color-2 u-border-hover-palette-5-dark-2 u-btn u-btn-round u-button-style u-custom-color-1 u-custom-item u-hover-custom-color-4 u-radius-6 u-text-active-black u-text-custom-color-3 u-text-hover-white u-btn-10" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" onclick="addToDisplay('7')">7</a>
+                </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-7">
-                <a href="index.html#sec-0854" class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-8" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">ln</a>
+                <a class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-8" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" onclick="addToDisplay('ln ')">ln</a>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-8">
-                <a href="index.html#sec-0854" class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-9" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">log</a>
+                <a class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-9" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" onclick="addToDisplay('log ')">log</a>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-9">
-                <a href="index.html#sec-0854" class="u-active-custom-color-4 u-border-2 u-border-active-custom-color-5 u-border-custom-color-2 u-border-hover-palette-5-dark-2 u-btn u-btn-round u-button-style u-custom-color-1 u-custom-item u-hover-custom-color-4 u-radius-6 u-text-active-black u-text-custom-color-3 u-text-hover-white u-btn-10" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">4</a>
+                <a class="u-active-custom-color-4 u-border-2 u-border-active-custom-color-5 u-border-custom-color-2 u-border-hover-palette-5-dark-2 u-btn u-btn-round u-button-style u-custom-color-1 u-custom-item u-hover-custom-color-4 u-radius-6 u-text-active-black u-text-custom-color-3 u-text-hover-white u-btn-10" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" onclick="addToDisplay('4')">4</a>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-10">
-                <a href="index.html#sec-0854" class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-11" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">atan</a>
+                <a class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-11" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" onclick="addToDisplay('tan ')">tan</a>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-11">
-                <a href="index.html#sec-0854" class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-12" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">sqrt</a>
+                <a class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-12" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" onclick="addToDisplay('atan ')">atan</a>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-12">
-                <a href="index.html#sec-0854" class="u-active-custom-color-4 u-border-2 u-border-active-custom-color-5 u-border-custom-color-2 u-border-hover-palette-5-dark-2 u-btn u-btn-round u-button-style u-custom-color-1 u-custom-item u-hover-custom-color-4 u-radius-6 u-text-active-black u-text-custom-color-3 u-text-hover-white u-btn-13" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">1</a>
+                <a class="u-active-custom-color-4 u-border-2 u-border-active-custom-color-5 u-border-custom-color-2 u-border-hover-palette-5-dark-2 u-btn u-btn-round u-button-style u-custom-color-1 u-custom-item u-hover-custom-color-4 u-radius-6 u-text-active-black u-text-custom-color-3 u-text-hover-white u-btn-13" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" onclick="addToDisplay('1')">1</a>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-13">
-                <a href="index.html#sec-0854" class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-14" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">tan</a>
+                <a class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-14" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" onclick="addToDisplay('sqrt ')">sqrt</a>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-14">
-                <a href="index.html#sec-0854" class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-15" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">(</a>
+                <a class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-15" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" onclick="addToDisplay('(')">(</a>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-15">
-                <a href="index.html#sec-0854" class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-16" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">)</a>
+                <a class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-16" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" onclick="addToDisplay(')')">)</a>
               </div>
             </div>
           </div>
@@ -158,99 +155,164 @@
           <div class="u-repeater u-repeater-2">
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-16">
-                <a href="index.html#sec-0854" class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-17" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">π</a>
+                <a id="pi-button" class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-17" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">π</a>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-17">
-                <a href="index.html#sec-0854" class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-18" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">%</a>
+                <a class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-18" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" onclick="addToDisplay('%')">%</a>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-18">
-                <a href="index.html#sec-0854" class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-19" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">/</a>
+                <a class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-19" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" onclick="addToDisplay('/')">/</a>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-19">
-                <a href="index.html#sec-0854" class="u-active-custom-color-4 u-border-2 u-border-active-custom-color-5 u-border-custom-color-2 u-border-hover-palette-5-dark-2 u-btn u-btn-round u-button-style u-custom-color-1 u-custom-item u-hover-custom-color-4 u-radius-6 u-text-active-black u-text-custom-color-3 u-text-hover-white u-btn-20" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">8</a>
+                <a class="u-active-custom-color-4 u-border-2 u-border-active-custom-color-5 u-border-custom-color-2 u-border-hover-palette-5-dark-2 u-btn u-btn-round u-button-style u-custom-color-1 u-custom-item u-hover-custom-color-4 u-radius-6 u-text-active-black u-text-custom-color-3 u-text-hover-white u-btn-20" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" onclick="addToDisplay('8')">8</a>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-20">
-                <a href="index.html#sec-0854" class="u-active-custom-color-4 u-border-2 u-border-active-custom-color-5 u-border-custom-color-2 u-border-hover-palette-5-dark-2 u-btn u-btn-round u-button-style u-custom-color-1 u-custom-item u-hover-custom-color-4 u-radius-6 u-text-active-black u-text-custom-color-3 u-text-hover-white u-btn-21" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">9</a>
+                <a class="u-active-custom-color-4 u-border-2 u-border-active-custom-color-5 u-border-custom-color-2 u-border-hover-palette-5-dark-2 u-btn u-btn-round u-button-style u-custom-color-1 u-custom-item u-hover-custom-color-4 u-radius-6 u-text-active-black u-text-custom-color-3 u-text-hover-white u-btn-21" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" onclick="addToDisplay('9')">9</a>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-21">
-                <a href="index.html#sec-0854" class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-22" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">*</a>
+                <a class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-22" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" onclick="addToDisplay('*')">*</a>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-22">
-                <a href="index.html#sec-0854" class="u-active-custom-color-4 u-border-2 u-border-active-custom-color-5 u-border-custom-color-2 u-border-hover-palette-5-dark-2 u-btn u-btn-round u-button-style u-custom-color-1 u-custom-item u-hover-custom-color-4 u-radius-6 u-text-active-black u-text-custom-color-3 u-text-hover-white u-btn-23" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">5</a>
+                <a class="u-active-custom-color-4 u-border-2 u-border-active-custom-color-5 u-border-custom-color-2 u-border-hover-palette-5-dark-2 u-btn u-btn-round u-button-style u-custom-color-1 u-custom-item u-hover-custom-color-4 u-radius-6 u-text-active-black u-text-custom-color-3 u-text-hover-white u-btn-23" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" onclick="addToDisplay('5')">5</a>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-23">
-                <a href="index.html#sec-0854" class="u-active-custom-color-4 u-border-2 u-border-active-custom-color-5 u-border-custom-color-2 u-border-hover-palette-5-dark-2 u-btn u-btn-round u-button-style u-custom-color-1 u-custom-item u-hover-custom-color-4 u-radius-6 u-text-active-black u-text-custom-color-3 u-text-hover-white u-btn-24" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">6</a>
+                <a class="u-active-custom-color-4 u-border-2 u-border-active-custom-color-5 u-border-custom-color-2 u-border-hover-palette-5-dark-2 u-btn u-btn-round u-button-style u-custom-color-1 u-custom-item u-hover-custom-color-4 u-radius-6 u-text-active-black u-text-custom-color-3 u-text-hover-white u-btn-24" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" onclick="addToDisplay('6')">6</a>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-24">
-                <a href="index.html#sec-0854" class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-25" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">-</a>
+                <a class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-25" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" onclick="addToDisplay('-')">-</a>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-25">
-                <a href="index.html#sec-0854" class="u-active-custom-color-4 u-border-2 u-border-active-custom-color-5 u-border-custom-color-2 u-border-hover-palette-5-dark-2 u-btn u-btn-round u-button-style u-custom-color-1 u-custom-item u-hover-custom-color-4 u-radius-6 u-text-active-black u-text-custom-color-3 u-text-hover-white u-btn-26" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">2</a>
+                <a class="u-active-custom-color-4 u-border-2 u-border-active-custom-color-5 u-border-custom-color-2 u-border-hover-palette-5-dark-2 u-btn u-btn-round u-button-style u-custom-color-1 u-custom-item u-hover-custom-color-4 u-radius-6 u-text-active-black u-text-custom-color-3 u-text-hover-white u-btn-26" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" onclick="addToDisplay('2')">2</a>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-26">
-                <a href="index.html#sec-0854" class="u-active-custom-color-4 u-border-2 u-border-active-custom-color-5 u-border-custom-color-2 u-border-hover-palette-5-dark-2 u-btn u-btn-round u-button-style u-custom-color-1 u-custom-item u-hover-custom-color-4 u-radius-6 u-text-active-black u-text-custom-color-3 u-text-hover-white u-btn-27" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">3</a>
+                <a class="u-active-custom-color-4 u-border-2 u-border-active-custom-color-5 u-border-custom-color-2 u-border-hover-palette-5-dark-2 u-btn u-btn-round u-button-style u-custom-color-1 u-custom-item u-hover-custom-color-4 u-radius-6 u-text-active-black u-text-custom-color-3 u-text-hover-white u-btn-27" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" onclick="addToDisplay('3')">3</a>
               </div>
             </div>
-
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-27">
-                <a href="index.html#sec-0854" class="u-active-custom-color-4 u-border-2 u-border-active-custom-color-5 u-border-custom-color-2 u-border-hover-palette-5-dark-2 u-btn u-btn-round u-button-style u-custom-color-1 u-custom-item u-hover-custom-color-4 u-radius-6 u-text-active-black u-text-custom-color-3 u-text-hover-white u-btn-28" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">+</a>
+                <a class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-28" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" onclick="addToDisplay('+')">+</a>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-28">
-                <a href="index.html#sec-0854" class="u-active-custom-color-4 u-border-2 u-border-active-custom-color-5 u-border-custom-color-2 u-border-hover-palette-5-dark-2 u-btn u-btn-round u-button-style u-custom-color-1 u-custom-item u-hover-custom-color-4 u-radius-6 u-text-active-black u-text-custom-color-3 u-text-hover-white u-btn-29" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">0</a>
+                <a class="u-active-custom-color-4 u-border-2 u-border-active-custom-color-5 u-border-custom-color-2 u-border-hover-palette-5-dark-2 u-btn u-btn-round u-button-style u-custom-color-1 u-custom-item u-hover-custom-color-4 u-radius-6 u-text-active-black u-text-custom-color-3 u-text-hover-white u-btn-29" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" onclick="addToDisplay('0')">0</a>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-29">
-                <a href="index.html#sec-0854" class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-4-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-30" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">=</a>
+                <a class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-4-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-30" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" onclick="sendToPython()">=</a>
               </div>
             </div>
             <div class="u-container-style u-list-item u-repeater-item">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-30">
-                <a href="index.html#sec-0854" class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-31" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">.</a>
+                <a class="u-border-2 u-border-active-palette-5-dark-3 u-border-hover-palette-5-dark-2 u-border-palette-1-base u-btn u-btn-round u-button-style u-custom-item u-hover-palette-5-dark-1 u-none u-radius-6 u-text-active-black u-text-body-color u-text-hover-white u-btn-31" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" onclick="addToDisplay('.')">.</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    
-    
-    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-849d"><div class="u-clearfix u-sheet u-sheet-1">
-        <p class="u-small-text u-text u-text-variant u-text-1">Пример текста. Кликните, чтобы выбрать элемент "Текст".</p>
-      </div></footer>
-    <section class="u-backlink u-clearfix u-grey-80">
-      <a class="u-link" href="https://nicepage.com/templates" target="_blank">
-        <span>Template</span>
-      </a>
-      <p class="u-text">
-        <span>created with</span>
-      </p>
-      <a class="u-link" href="" target="_blank">
-        <span>WYSIWYG Web Builder</span>
-      </a>. 
-    </section>
-  
+
+
+
+
+<script>
+    document.getElementById("clear-button").addEventListener("click", function() {
+      clearDisplay();
+    });
+
+    document.getElementById("erase-button").addEventListener("click", function() {
+      eraseLastCharacter();
+    });
+
+    document.getElementById("pi-button").addEventListener("click", function() {
+      displayPi();
+    });
+
+    function addToDisplay(number) {
+      var displayInput = document.getElementById("calc_display");
+      var currentValue = displayInput.value;
+
+      if (currentValue === "0") {
+        // Если текущее значение дисплея равно "0"
+        if (number === ".") {
+          // Если вводится символ ".", заменяем ноль на "0."
+          displayInput.value = "0.";
+        } else {
+          // В противном случае, заменяем ноль на вводимый символ
+          displayInput.value = number;
+        }
+      } else {
+        if (number === "." && currentValue.includes(".") && currentValue.match(/[-+*/]\d*\.$/) && !currentValue.slice(currentValue.lastIndexOf("."), currentValue.length).match(/[+\-*/]/)) {
+          // Если символ точки уже присутствует на дисплее и не следует за знаком + - * /, ничего не делаем
+          return;
+        } else {
+          displayInput.value += number;
+        }
+      }
+    }
+
+    function clearDisplay() {
+      var displayInput = document.getElementById("calc_display");
+      displayInput.value = "";
+    }
+
+    // Отправляем содержимое дисплея на обработку
+    function sendToPython() {
+      var displayInput = document.getElementById("calc_display").value;
+      var urlInput = encodeURIComponent(displayInput);
+      var xhttp = new XMLHttpRequest();
+
+      xhttp.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+          // Получаем результат обработки на сервере
+          var result = this.responseText;
+
+          // Отображаем результат на дисплее
+          document.getElementById("calc_display").value = result;
+        }
+      };
+
+      // Отправляем значение на сервер для обработки в функции Python
+        xhttp.open("GET", "/process?input=" + urlInput, true);
+          xhttp.send();
+        }
+
+      // Стираем последний символ
+      function eraseLastCharacter() {
+        var displayInput = document.getElementById("calc_display");
+        var currentValue = displayInput.value;
+
+        if (currentValue.length > 0) {
+          displayInput.value = currentValue.slice(0, -1);
+        }
+      }
+
+      // Отображаем число пи
+      function displayPi() {
+        var displayInput = document.getElementById("calc_display");
+        displayInput.value = Math.PI;
+      }
+</script>
+
 </body></html>
