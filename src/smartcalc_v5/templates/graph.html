@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Matplotlib веб-интерфейс</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        max-width: 600px; /* Желаемая максимальная ширина контейнера */
+        margin: 0 auto; /* Автоматический отступ слева и справа */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Отрисовка графика</h1>
+      <form method="post" action="{% url 'graph' %}">
+        {% csrf_token %}
+        <label for="expression">Функция (инфиксная нотация с переменной x):</label>
+        <input type="text" name="expression" id="expression" required>
+        <br>
+        <input type="submit" value="Построить график">
+      </form>
+
+      {% if error %}
+        <p>{{ error }}</p>
+      {% endif %}
+
+      {% if graph_url %}
+        <h2>График функции:</h2>
+        <img src="data:image/png;base64,{{ graph_url }}" alt="График">
+      {% endif %}
+    </div>
+  </body>
+</html>
